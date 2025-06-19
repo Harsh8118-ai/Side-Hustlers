@@ -18,27 +18,37 @@ interface ProfileData {
   category: string
 }
 
-interface CalculatorResultProps {
-  profile: ProfileData
-}
 
-export default function CalculatorResult({ profile }: CalculatorResultProps) {
+export default function CalculatorResult() {
   const searchParams = useSearchParams()
   const engagementRate = Number.parseFloat(searchParams.get("engagementRate") || "3.5")
   const niche = searchParams.get("niche") || "lifestyle"
 
   const accountTypeLabel = (type: number): string => {
-  switch (type) {
-    case 1:
-      return "Personal"
-    case 2:
-      return "Business"
-    case 3:
-      return "Creator"
-    default:
-      return "Unknown"
+    switch (type) {
+      case 1:
+        return "Personal"
+      case 2:
+        return "Business"
+      case 3:
+        return "Creator"
+      default:
+        return "Unknown"
+    }
   }
-}
+
+    const profile = {
+    username: searchParams.get("username") || "",
+    full_name: searchParams.get("full_name") || "",
+    biography: searchParams.get("biography") || "",
+    profile_pic_url: searchParams.get("profile_pic_url") || "",
+    follower_count: Number(searchParams.get("follower_count") || "0"),
+    following_count: Number(searchParams.get("following_count") || "0"),
+    media_count: Number(searchParams.get("media_count") || "0"),
+    is_private: searchParams.get("is_private") === "true",
+    account_type: Number(searchParams.get("account_type") || "0"),
+    category: searchParams.get("category") || "",
+  }
 
 
 

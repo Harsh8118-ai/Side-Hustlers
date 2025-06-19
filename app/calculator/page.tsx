@@ -1,28 +1,14 @@
-"use client";
+"use client"
 
 import { Suspense } from "react"
 import CalculatorResult from "@/components/CalculatorResult"
 import ShareButtons from "@/components/ShareButtons"
 import AdPlaceholder from "@/components/AdPlaceholder"
 import { Card } from "@/components/ui/card"
-import { useSearchParams } from "next/navigation"
+
 
 
 export default function CalculatorPage() {
-  const searchParams = useSearchParams()
-
-  const profileData = {
-    username: searchParams.get("username") || "",
-    full_name: searchParams.get("full_name") || "",
-    biography: searchParams.get("biography") || "",
-    profile_pic_url: searchParams.get("profile_pic_url") || "",
-    follower_count: Number(searchParams.get("follower_count") || "0"),
-    following_count: Number(searchParams.get("following_count") || "0"),
-    media_count: Number(searchParams.get("media_count") || "0"),
-    is_private: searchParams.get("is_private") === "true",
-    account_type: Number(searchParams.get("account_type") || ""),
-    category: searchParams.get("category") || "",
-  }
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-6xl mx-auto">
@@ -35,7 +21,7 @@ export default function CalculatorPage() {
             </div>
 
             <Suspense fallback={<div className="animate-pulse bg-gray-800 h-64 rounded-xl" />}>
-              <CalculatorResult profile={profileData} />
+              <CalculatorResult />
             </Suspense>
 
             <ShareButtons />
