@@ -19,6 +19,7 @@
     const [loading, setLoading] = useState(false);
     const [profile, setProfile] = useState<Profile | null>(null);
     const [error, setError] = useState<string | null>(null);
+    const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
     const getDetails = async (username: string) => {
       setLoading(true);
@@ -57,6 +58,7 @@
         };
 
         setProfile(cleanProfile);
+        axios.post(`${BACKEND_URL}/api/instagram/save`, cleanProfile).catch(console.error);
       } catch (err: any) {
         setError(err.message || "Something went wrong");
       } finally {

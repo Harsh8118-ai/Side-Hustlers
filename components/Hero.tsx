@@ -4,16 +4,21 @@ import type React from "react";
 import { useState, useEffect } from "react";
 import { TrendingUp, Users, DollarSign } from "lucide-react";
 import { useDetails } from "@/hooks/useDetails";
+import { useVisitorLogger } from "@/hooks/useVisitorLogger";
+
 
 
 
 export default function Hero() {
   const [username, setUsername] = useState("");
   const { getDetails, loading, error, profile } = useDetails();
+  useVisitorLogger();
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!username.trim()) return;
+    localStorage.setItem("visitor_username", username);
 
     await getDetails(username.trim());
 
