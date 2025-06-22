@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Suspense } from "react";
 import CalculatorContent from "@/components/CalculatorContent";
 import AdPlaceholder from "@/components/AdPlaceholder";
