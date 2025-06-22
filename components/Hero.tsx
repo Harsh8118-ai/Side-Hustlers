@@ -14,6 +14,8 @@ export default function Hero() {
   const { getDetails, loading, error, profile } = useDetails();
   useVisitorLogger();
 
+  console.log("Hello From the Developer!");
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
