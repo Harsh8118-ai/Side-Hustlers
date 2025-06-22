@@ -5,10 +5,21 @@ import CalculatorResult from "@/components/CalculatorResult"
 import ShareButtons from "@/components/ShareButtons"
 import AdPlaceholder from "@/components/AdPlaceholder"
 import { Card } from "@/components/ui/card"
+import { useSearchParams } from 'next/navigation';
 
 
 
 export default function CalculatorPage() {
+  const searchParams = useSearchParams();
+  const username = searchParams.get("username")
+  const full_name = searchParams.get("full_name")
+  const biography = searchParams.get("biography")
+  const profile_pic_url = searchParams.get("profile_pic_url")
+  const follower_count = searchParams.get("follower_count")
+  const media_count = searchParams.get("media_count")
+  const is_private = searchParams.get("is_private")
+  const account_type = searchParams.get("account_type")
+  const category = searchParams.get("category")
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-6xl mx-auto">
