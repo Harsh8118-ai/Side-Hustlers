@@ -5,7 +5,7 @@ import NewsletterSignup from "@/components/NewsletterSignup"
 import Image from "next/image"
 
 export const metadata = {
-  title: "Blog & Resources - Instagram Earnings Calculator",
+  title: "Blog & Resources - Side Hustlers",
   description:
     "Learn how to grow your Instagram, increase engagement, and maximize your earnings with our expert guides and tips.",
 }

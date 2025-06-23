@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card"
 import AdPlaceholder from "@/components/AdPlaceholder"
 
 export const metadata = {
-  title: "Privacy Policy - Instagram Earnings Calculator",
+  title: "Privacy Policy - Side Hustlers",
   description: "Our privacy policy explains how we collect, use, and protect your personal information.",
 }
 
@@ -105,9 +105,9 @@ export default function PrivacyPage() {
               <p>
                 If you have questions about this Privacy Policy, please contact us at:
                 <br />
-                Email: privacy@instagram-calculator.com
+                Email: contact.sidehustlers@gmail.com
                 <br />
-                Address: 123 Privacy Street, San Francisco, CA 94102
+                Address: Sector-52, Noida, India (201301)
               </p>
             </div>
           </section>

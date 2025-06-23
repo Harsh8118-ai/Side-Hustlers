@@ -3,7 +3,7 @@ import AdPlaceholder from "@/components/AdPlaceholder"
 import Image from "next/image"
 
 export const metadata = {
-  title: "About - Instagram Earnings Calculator",
+  title: "About - Side Hustlers",
   description:
     "Learn how our Instagram earnings calculator works and our mission to help creators monetize their content.",
 }

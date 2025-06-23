@@ -1,10 +1,10 @@
 import { Card } from "@/components/ui/card"
 import ContactForm from "@/components/ContactForm"
 import AdPlaceholder from "@/components/AdPlaceholder"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin } from "lucide-react"
 
 export const metadata = {
-  title: "Contact Us - Instagram Earnings Calculator",
+  title: "Contact Us - Side Hustlers",
   description:
     "Get in touch with our team. We're here to help with any questions about our Instagram earnings calculator.",
 }
@@ -38,15 +38,15 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="text-violet-400" size={20} />
-                  <span className="text-gray-300">hello@instagram-calculator.com</span>
+                  <span className="text-gray-300">contact.sidehustlers@gmail.com</span>
                 </div>
-                <div className="flex items-center space-x-3">
+                {/* <div className="flex items-center space-x-3">
                   <Phone className="text-violet-400" size={20} />
                   <span className="text-gray-300">+1 (555) 123-4567</span>
-                </div>
+                </div> */}
                 <div className="flex items-center space-x-3">
                   <MapPin className="text-violet-400" size={20} />
-                  <span className="text-gray-300">San Francisco, CA</span>
+                  <span className="text-gray-300">Sector-52, Noida, India (201301)</span>
                 </div>
               </div>
             </Card>

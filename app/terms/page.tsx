@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card"
 import AdPlaceholder from "@/components/AdPlaceholder"
 
 export const metadata = {
-  title: "Terms of Service - Instagram Earnings Calculator",
+  title: "Terms of Service - Side Hustlers",
   description: "Terms of service and conditions for using our Instagram earnings calculator.",
 }
 
@@ -102,9 +102,9 @@ export default function TermsPage() {
               <p>
                 If you have any questions about these Terms of Service, please contact us at:
                 <br />
-                Email: legal@instagram-calculator.com
+                Email: contact.sidehustlers@gmail.com
                 <br />
-                Address: 123 Legal Street, San Francisco, CA 94102
+                Address: Sector-52, Noida, India (201301)
               </p>
             </div>
           </section>

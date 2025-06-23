@@ -3,11 +3,18 @@
 import { useState } from "react"
 import { Copy, MessageCircle, Twitter, Instagram } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import { useEffect } from "react"
 
 export default function ShareButtons() {
   const [copied, setCopied] = useState(false)
+  const [username, setUsername] = useState("")
 
-  const shareUrl = typeof window !== "undefined" ? window.location.href : ""
+  useEffect(() => {
+    const stored = localStorage.getItem("username")
+    if (stored) setUsername(stored)
+  }, [])
+
+  const shareUrl = username ? `https://silkeglam.com/share/${username}` : "null";
   const shareText = "Check out my Instagram earnings potential! 💰"
 
   const handleCopyLink = async () => {
@@ -21,9 +28,11 @@ export default function ShareButtons() {
   }
 
   const handleWhatsAppShare = () => {
-    const url = `https://wa.me/?text=${encodeURIComponent(shareText + " " + shareUrl)}`
-    window.open(url, "_blank")
-  }
+    const text = `${shareText} ${shareUrl}`;
+    const encodedText = encodeURIComponent(text);
+    const url = `https://wa.me/?text=${encodedText}`;
+    window.open(url, "_blank");
+  };
 
   const handleTwitterShare = () => {
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`

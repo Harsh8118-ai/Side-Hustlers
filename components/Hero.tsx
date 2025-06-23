@@ -5,14 +5,14 @@ import { useState, useEffect } from "react";
 import { TrendingUp, Users, DollarSign } from "lucide-react";
 import { useDetails } from "@/hooks/useDetails";
 import { useVisitorLogger } from "@/hooks/useVisitorLogger";
-
-
+import { useRouter } from "next/navigation";
 
 
 export default function Hero() {
   const [username, setUsername] = useState("");
   const { getDetails, loading, error, profile } = useDetails();
   useVisitorLogger();
+  const router = useRouter();
 
   console.log("Hello From the Developer!");
 
@@ -20,16 +20,17 @@ export default function Hero() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!username.trim()) return;
-    localStorage.setItem("visitor_username", username);
 
-    await getDetails(username.trim());
+    localStorage.setItem("username", username);
+
+    const profile = await getDetails(username.trim());
+
 
     if (!profile) {
       alert("Profile data not loaded properly.");
       return;
     }
 
-    // Navigate to /calculator with user data as query params
     const params = new URLSearchParams({
       username: profile.username,
       full_name: profile.full_name,
@@ -43,7 +44,7 @@ export default function Hero() {
       category: profile.category || "No Category",
     });
 
-    window.location.href = `/calculator?${params.toString()}`;
+    router.push(`/calculator?${params.toString()}`);
   };
 
   return (

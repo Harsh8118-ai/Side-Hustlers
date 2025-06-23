@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation"
 import { Card } from "@/components/ui/card"
-import { DollarSign, TrendingUp, Users, Heart } from "lucide-react"
+import { TrendingUp, IndianRupeeIcon } from "lucide-react"
 import Image from "next/image"
 
 interface ProfileData {
@@ -17,7 +17,6 @@ interface ProfileData {
   account_type: number
   category: string
 }
-
 
 export default function CalculatorResult() {
   const searchParams = useSearchParams()
@@ -37,7 +36,7 @@ export default function CalculatorResult() {
     }
   }
 
-    const profile = {
+  const profile = {
     username: searchParams.get("username") || "",
     full_name: searchParams.get("full_name") || "",
     biography: searchParams.get("biography") || "",
@@ -49,9 +48,6 @@ export default function CalculatorResult() {
     account_type: Number(searchParams.get("account_type") || "0"),
     category: searchParams.get("category") || "",
   }
-
-
-
 
   const {
     username,
@@ -77,15 +73,25 @@ export default function CalculatorResult() {
     business: 1.5,
   }
 
-  const baseRate = 0.01
+  const baseRate = follower_count < 100 ? 0.5 : follower_count < 1000 ? 0.25 : 0.01
   const engagementMultiplier = Math.max(0.5, engagementRate / 3.5)
   const nicheMultiplier = nicheMultipliers[niche] || 1.0
+  const privacyMultiplier = is_private ? 0.5 : 1.2
 
-  const monthlyEarnings = Math.round(follower_count * baseRate * engagementMultiplier * nicheMultiplier * 4)
+  const accountTypeText = accountTypeLabel(account_type)
+  const accountTypeBoost: { [key: string]: number } = {
+    Personal: 1.0,
+    Business: 1.2,
+    Creator: 1.3,
+    Unknown: 0.9,
+  }
+
+  const accountBoost = accountTypeBoost[accountTypeText] || 1.0
+  const totalMultiplier = engagementMultiplier * nicheMultiplier * accountBoost * privacyMultiplier
+
+  const monthlyEarnings = Math.round(follower_count * baseRate * totalMultiplier * 4)
   const yearlyEarnings = monthlyEarnings * 12
   const perPostEarnings = Math.round(monthlyEarnings / 4)
-
-  const accountType = accountTypeLabel(account_type)
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat("en-IN", {
@@ -99,8 +105,7 @@ export default function CalculatorResult() {
   const sanitizedBio = biography.replace(/</g, "&lt;").replace(/>/g, "&gt;")
 
   return (
-    <div className="space-y-8">
-      {/* Instagram Profile Card */}
+    <div id="capture-area" className="space-y-8">
       <Card className="glassmorphism p-6 flex flex-col md:flex-row items-center gap-6 mb-8">
         {profile_pic_url && (
           <Image
@@ -121,36 +126,28 @@ export default function CalculatorResult() {
             )}
           </div>
           <div className="flex justify-center md:justify-start gap-4 pt-2 text-sm text-gray-300">
-            <div>
-              <span className="text-white font-semibold">{media_count.toLocaleString()}</span> Posts
-            </div>
-            <div>
-              <span className="text-white font-semibold">{follower_count.toLocaleString()}</span> Followers
-            </div>
-            <div>
-              <span className="text-white font-semibold">{following_count.toLocaleString()}</span> Following
-            </div>
+            <div><span className="text-white font-semibold">{media_count.toLocaleString()}</span> Posts</div>
+            <div><span className="text-white font-semibold">{follower_count.toLocaleString()}</span> Followers</div>
+            <div><span className="text-white font-semibold">{following_count.toLocaleString()}</span> Following</div>
           </div>
           <p className="text-gray-400 text-sm">{full_name}</p>
           <p className="text-gray-300 text-sm whitespace-pre-line">{sanitizedBio}</p>
-
-          {/* New Info */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4 text-sm text-gray-300">
-            <div>
-              <span className="text-white font-semibold">Account Type:</span> {accountType}
-            </div>
-            <div>
-              <span className="text-white font-semibold">Category:</span> {category}
-            </div>
+            <div><span className="text-white font-semibold">Account Type:</span> {accountTypeText}</div>
+            <div><span className="text-white font-semibold">Category:</span> {category}</div>
           </div>
+          {follower_count < 500 && !is_private && (
+            <p className="text-green-400 text-sm pt-2">
+              Even small creators like you can start earning! 🌱
+            </p>
+          )}
         </div>
       </Card>
 
-      {/* Earnings Cards */}
       <div className="grid md:grid-cols-3 gap-6 mb-8">
         <div className="text-center">
           <div className="bg-violet-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-            <DollarSign className="text-violet-400" size={24} />
+            <IndianRupeeIcon className="text-violet-400" size={24} />
           </div>
           <h3 className="text-3xl font-bold text-white mb-2">{formatCurrency(perPostEarnings)}</h3>
           <p className="text-gray-400">Per Sponsored Post</p>
@@ -166,20 +163,19 @@ export default function CalculatorResult() {
 
         <div className="text-center">
           <div className="bg-green-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-            <DollarSign className="text-green-400" size={24} />
+            <IndianRupeeIcon className="text-green-400" size={24} />
           </div>
           <h3 className="text-3xl font-bold text-white mb-2">{formatCurrency(yearlyEarnings)}</h3>
           <p className="text-gray-400">Yearly Potential</p>
         </div>
       </div>
 
-      {/* Breakdown Card */}
       <Card className="glassmorphism p-6">
         <h3 className="text-xl font-bold mb-4 gradient-text">Earnings Breakdown</h3>
         <div className="space-y-4">
           <div className="flex justify-between items-center">
             <span className="text-gray-300">Base Rate (per follower)</span>
-            <span className="text-white">₹0.01</span>
+            <span className="text-white">₹{baseRate.toFixed(2)}</span>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-gray-300">Engagement Multiplier</span>
@@ -187,7 +183,15 @@ export default function CalculatorResult() {
           </div>
           <div className="flex justify-between items-center">
             <span className="text-gray-300">Niche Multiplier ({niche})</span>
-            <span className="text-white">{nicheMultiplier}x</span>
+            <span className="text-white">{nicheMultiplier.toFixed(2)}x</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-gray-300">Account Type Boost</span>
+            <span className="text-white">{accountBoost.toFixed(2)}x</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-gray-300">Privacy Adjustment</span>
+            <span className="text-white">{privacyMultiplier.toFixed(2)}x</span>
           </div>
           <div className="border-t border-gray-700 pt-4">
             <div className="flex justify-between items-center font-semibold">

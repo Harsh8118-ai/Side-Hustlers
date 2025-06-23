@@ -5,8 +5,10 @@ import type React from "react"
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Calculator, Users, Heart, Tag } from "lucide-react"
+import { useRouter } from "next/navigation";
 
 export default function CalculatorForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     username: "",
     followers: "",
@@ -28,7 +30,7 @@ export default function CalculatorForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const params = new URLSearchParams(formData)
-    window.location.href = `/calculator?${params.toString()}`
+    router.push(`/calculator?${params.toString()}`);
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
