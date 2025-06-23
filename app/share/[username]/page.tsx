@@ -1,14 +1,16 @@
 import { Metadata } from "next";
 
-type Props = {
+interface PageProps {
   params: {
     username: string;
   };
-};
+}
 
-// ✅ Correct type and shape
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { username } = params;
+// ✅ generateMetadata expects a non-Promise `params`
+export async function generateMetadata(
+  props: PageProps
+): Promise<Metadata> {
+  const { username } = props.params;
 
   const profilePic = "https://i.imgur.com/f8fJ8jm.png";
   const followers = 21;
@@ -36,9 +38,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// ✅ Page component
-export default function SharePage({ params }: Props) {
-  const { username } = params;
+// ✅ page component
+export default function SharePage(props: PageProps) {
+  const { username } = props.params;
 
   return (
     <div className="p-6 text-white">
