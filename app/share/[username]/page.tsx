@@ -1,12 +1,16 @@
 import { Metadata } from "next"
 
-export async function generateMetadata({ params }: { params: { username: string } }): Promise<Metadata> {
-  const { username } = params;
+export async function generateMetadata({
+  params,
+}: {
+  params: { username: string }
+}): Promise<Metadata> {
+  const { username } = params
 
-  const profilePic = "https://i.imgur.com/f8fJ8jm.png";
-  const followers = 21;
+  const profilePic = "https://i.imgur.com/f8fJ8jm.png"
+  const followers = 21
 
-  const imageUrl = `https://silkeglam.com/api/og?username=${username}&followers=${followers}&profile_pic_url=${encodeURIComponent(profilePic)}`;
+  const imageUrl = `https://silkeglam.com/api/og?username=${username}&followers=${followers}&profile_pic_url=${encodeURIComponent(profilePic)}`
 
   return {
     title: `@${username}'s Instagram Earnings`,
@@ -24,11 +28,15 @@ export async function generateMetadata({ params }: { params: { username: string 
       description: "Even small creators can earn! 💸",
       images: [imageUrl],
     },
-  };
+  }
 }
 
-export default function SharePage({ params }: { params: { username: string } }) {
-  const { username } = params;
+export default function SharePage({
+  params,
+}: {
+  params: { username: string }
+}) {
+  const { username } = params
 
   return (
     <div className="p-6 text-white">
