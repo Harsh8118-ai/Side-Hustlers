@@ -1,12 +1,13 @@
 import { Metadata } from "next";
 
-interface SharePageProps {
-  params: {
-    username: string;
-  };
-}
+// ❌ REMOVE this
+// interface SharePageProps {
+//   params: {
+//     username: string;
+//   };
+// }
 
-// ✅ Correct way to declare generateMetadata
+// ✅ Use inline typing for generateMetadata
 export async function generateMetadata(
   { params }: { params: { username: string } }
 ): Promise<Metadata> {
@@ -38,9 +39,11 @@ export async function generateMetadata(
   };
 }
 
-// ✅ You can keep using the interface for the page component
-export default function SharePage(props: SharePageProps) {
-  const { username } = props.params;
+// ✅ Same inline typing for the component
+export default function SharePage(
+  { params }: { params: { username: string } }
+) {
+  const { username } = params;
 
   return (
     <div className="p-6 text-white">
