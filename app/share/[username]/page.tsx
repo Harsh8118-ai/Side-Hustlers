@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 
 type Props = {
   params: {
@@ -6,10 +6,8 @@ type Props = {
   };
 };
 
-export async function generateMetadata(
-  { params }: Props,
-  parent?: ResolvingMetadata
-): Promise<Metadata> {
+// ✅ Correct type and shape
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { username } = params;
 
   const profilePic = "https://i.imgur.com/f8fJ8jm.png";
@@ -38,18 +36,14 @@ export async function generateMetadata(
   };
 }
 
-
-export default function SharePage({
-  params,
-}: {
-  params: { username: string }
-}) {
-  const { username } = params
+// ✅ Page component
+export default function SharePage({ params }: Props) {
+  const { username } = params;
 
   return (
     <div className="p-6 text-white">
       <h1 className="text-2xl font-bold">Share Page for @{username}</h1>
       <p>Link preview should now work across platforms ✅</p>
     </div>
-  )
+  );
 }
