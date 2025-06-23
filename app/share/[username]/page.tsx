@@ -6,11 +6,11 @@ interface SharePageProps {
   };
 }
 
-// ✅ generateMetadata expects a non-Promise `params`
+// ✅ Correct way to declare generateMetadata
 export async function generateMetadata(
-  props: SharePageProps
+  { params }: { params: { username: string } }
 ): Promise<Metadata> {
-  const { username } = props.params;
+  const { username } = params;
 
   const profilePic = "https://i.imgur.com/f8fJ8jm.png";
   const followers = 21;
@@ -38,7 +38,7 @@ export async function generateMetadata(
   };
 }
 
-// ✅ page component
+// ✅ You can keep using the interface for the page component
 export default function SharePage(props: SharePageProps) {
   const { username } = props.params;
 
