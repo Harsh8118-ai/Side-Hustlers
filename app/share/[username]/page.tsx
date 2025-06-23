@@ -1,16 +1,23 @@
-import { Metadata } from "next"
+import { Metadata, ResolvingMetadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { username: string }
-}): Promise<Metadata> {
-  const { username } = params
+type Props = {
+  params: {
+    username: string;
+  };
+};
 
-  const profilePic = "https://i.imgur.com/f8fJ8jm.png"
-  const followers = 21
+export async function generateMetadata(
+  { params }: Props,
+  parent?: ResolvingMetadata
+): Promise<Metadata> {
+  const { username } = params;
 
-  const imageUrl = `https://silkeglam.com/api/og?username=${username}&followers=${followers}&profile_pic_url=${encodeURIComponent(profilePic)}`
+  const profilePic = "https://i.imgur.com/f8fJ8jm.png";
+  const followers = 21;
+
+  const imageUrl = `https://silkeglam.com/api/og?username=${username}&followers=${followers}&profile_pic_url=${encodeURIComponent(
+    profilePic
+  )}`;
 
   return {
     title: `@${username}'s Instagram Earnings`,
@@ -28,8 +35,9 @@ export async function generateMetadata({
       description: "Even small creators can earn! 💸",
       images: [imageUrl],
     },
-  }
+  };
 }
+
 
 export default function SharePage({
   params,
