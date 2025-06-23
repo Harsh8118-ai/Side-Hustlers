@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-interface PageProps {
+interface SharePageProps {
   params: {
     username: string;
   };
@@ -8,7 +8,7 @@ interface PageProps {
 
 // ✅ generateMetadata expects a non-Promise `params`
 export async function generateMetadata(
-  props: PageProps
+  props: SharePageProps
 ): Promise<Metadata> {
   const { username } = props.params;
 
@@ -39,7 +39,7 @@ export async function generateMetadata(
 }
 
 // ✅ page component
-export default function SharePage(props: PageProps) {
+export default function SharePage(props: SharePageProps) {
   const { username } = props.params;
 
   return (
