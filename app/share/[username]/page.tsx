@@ -1,5 +1,4 @@
 import { Metadata } from "next"
-import { FC } from 'react'
 
 export async function generateMetadata({ params }: { params: { username: string } }): Promise<Metadata> {
   const { username } = params;
@@ -28,15 +27,9 @@ export async function generateMetadata({ params }: { params: { username: string 
   };
 }
 
+export default function SharePage({ params }: { params: { username: string } }) {
+  const { username } = params;
 
-type PageProps = {
-  params: {
-    username: string
-  }
-}
-
-const SharePage: FC<PageProps> = ({ params }) => {
-  const { username } = params
   return (
     <div className="p-6 text-white">
       <h1 className="text-2xl font-bold">Share Page for @{username}</h1>
@@ -44,5 +37,3 @@ const SharePage: FC<PageProps> = ({ params }) => {
     </div>
   )
 }
-
-export default SharePage
