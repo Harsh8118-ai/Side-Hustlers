@@ -15,7 +15,7 @@ export default function PrivacyPage() {
           <p className="text-gray-300">Last updated: December 2024</p>
         </div>
 
-        <AdPlaceholder width="728" height="90" label="Top Banner Ad" className="mx-auto mb-12" />
+        <AdPlaceholder width="728" height="90" label="Top Banner Ad" className="mx-auto mb-12" placementId={101} />
 
         <Card className="glassmorphism p-8 space-y-8">
           <section>
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
             </div>
           </section>
 
-          <AdPlaceholder width="100%" height="200" label="Inline Content Ad" />
+          <AdPlaceholder width="100%" height="200" label="Inline Content Ad" placementId={101} />
 
           <section>
             <h2 className="text-2xl font-bold mb-4 gradient-text">Information Sharing</h2>
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
           </section>
         </Card>
 
-        <AdPlaceholder width="728" height="90" label="Bottom Banner Ad" className="mx-auto mt-12" />
+        <AdPlaceholder width="728" height="90" label="Bottom Banner Ad" className="mx-auto mt-12" placementId={101} />
       </div>
     </div>
   )

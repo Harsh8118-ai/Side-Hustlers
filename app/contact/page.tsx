@@ -22,7 +22,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <AdPlaceholder width="728" height="90" label="Top Banner Ad" className="mx-auto mb-12" />
+        <AdPlaceholder width="728" height="90" label="Top Banner Ad" className="mx-auto mb-12" placementId={101} />
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -51,7 +51,7 @@ export default function ContactPage() {
               </div>
             </Card>
 
-            <AdPlaceholder width="100%" height="250" label="Sidebar Ad" />
+            <AdPlaceholder width="100%" height="250" label="Sidebar Ad" placementId={101} />
 
             {/* Social Links */}
             <Card className="glassmorphism p-6">
@@ -103,7 +103,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <AdPlaceholder width="728" height="90" label="Bottom Banner Ad" className="mx-auto mt-12" />
+        <AdPlaceholder width="728" height="90" label="Bottom Banner Ad" className="mx-auto mt-12" placementId={101} />
       </div>
     </div>
   )

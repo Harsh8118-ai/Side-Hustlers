@@ -15,8 +15,8 @@ export default function CalculatorPage() {
             </Suspense>
           </div>
           <div className="space-y-6">
-            <AdPlaceholder width="300" height="250" label="Sidebar Ad 1" />
-            <AdPlaceholder width="300" height="600" label="Sidebar Ad 2" />
+            <AdPlaceholder width="300" height="250" label="Sidebar Ad 1" placementId={101} />
+            <AdPlaceholder width="300" height="600" label="Sidebar Ad 2" placementId={101} />
           </div>
         </div>
       </div>

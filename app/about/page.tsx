@@ -30,6 +30,7 @@ export default function AboutPage() {
             height="90"
             label="Top Banner Ad"
             className="w-full max-w-[728px] h-[90px]"
+            placementId={101}
           />
         </div>
 
@@ -114,6 +115,7 @@ export default function AboutPage() {
             height="90"
             label="Middle Banner Ad"
             className="w-full max-w-[728px] h-[90px]"
+            placementId={101}
           />
         </div>
 
@@ -148,6 +150,7 @@ export default function AboutPage() {
             height="90"
             label="Bottom Banner Ad"
             className="w-full max-w-[728px] h-[90px]"
+            placementId={101}
           />
         </div>
       </div>

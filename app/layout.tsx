@@ -4,11 +4,12 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import RouteChangeAdHandler from "@/components/RouteChangeAdHandler"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Instagram Earnings Calculator - Find Out How Much You Can Earn",
+  title: "Side Hustlers",
   description:
     "Calculate your potential Instagram earnings based on followers, engagement rate, and niche. Free Instagram income calculator for influencers and content creators.",
   keywords:
@@ -47,17 +48,35 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
       <head>
+        {/* ✅ Ezoic Privacy Scripts */}
+        <script
+          src="https://cmp.gatekeeperconsent.com/min.js"
+          data-cfasync="false"
+        ></script>
+        <script
+          src="https://the.gatekeeperconsent.com/cmp.min.js"
+          data-cfasync="false"
+        ></script>
+
+        {/* ✅ Ezoic Header Script */}
+        <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.ezstandalone = window.ezstandalone || {};
+              ezstandalone.cmd = ezstandalone.cmd || [];
+            `,
+          }}
+        ></script>
+
+        {/* Your original meta and links */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -67,6 +86,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} bg-gray-900 text-white min-h-screen`}>
         <Header />
+        <RouteChangeAdHandler />
         <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
