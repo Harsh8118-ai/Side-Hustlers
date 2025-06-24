@@ -14,7 +14,9 @@ export default function ShareButtons() {
     if (stored) setUsername(stored)
   }, [])
 
-  const shareUrl = username ? `https://silkeglam.com/share/${username}` : "null";
+  const shareUrl = username
+    ? `https://silkeglam.com/share/${username}`
+    : window.location.href;
   const shareText = "Check out my Instagram earnings potential! 💰"
 
   const handleCopyLink = async () => {
