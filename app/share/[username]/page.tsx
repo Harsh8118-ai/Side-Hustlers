@@ -8,7 +8,7 @@ export async function generateMetadata(
   const BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
   const res = await fetch(`${BASE_URL}/api/instagram/user/${username}`, {
-    next: { revalidate: 60 }, // Cache for 60s
+    next: { revalidate: 60 }, 
   });
 
   if (!res.ok) {
