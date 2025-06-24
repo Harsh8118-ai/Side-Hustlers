@@ -5,7 +5,7 @@ import Image from "next/image"
 export const metadata = {
   title: "About - Side Hustlers",
   description:
-    "Learn how our Instagram earnings calculator works and our mission to help creators monetize their content.",
+    "Learn how our Instagram Income calculator works and our mission to help creators monetize their content.",
 }
 
 export default function AboutPage() {
@@ -41,7 +41,7 @@ export default function AboutPage() {
           </h2>
           <div className="space-y-6 text-gray-300 text-sm sm:text-base">
             <p>
-              Our Instagram Earnings Calculator uses a sophisticated algorithm that analyzes multiple factors to provide
+              Our Instagram Income Calculator uses a sophisticated algorithm that analyzes multiple factors to provide
               accurate earning estimates for content creators and influencers.
             </p>
 

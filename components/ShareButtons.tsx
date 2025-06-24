@@ -34,7 +34,7 @@ export default function ShareButtons() {
     ? `https://silkeglam.com/share/${username}`
     : window.location.href;
 
-  const shareText = `📢 *Instagram Earnings Report!*
+  const shareText = `📢 *Instagram Income Report!*
 
 👤 *@${username}*
 👥 *Followers:* ${followerCount.toLocaleString()}

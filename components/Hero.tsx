@@ -58,18 +58,18 @@ export default function Hero() {
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-violet-600/20 border border-violet-500/30 mb-8">
             <TrendingUp className="mr-2" size={16} />
             <span className="text-sm font-medium text-violet-300">
-              Free Instagram Earnings Calculator
+              Free Instagram Income Calculator
             </span>
           </div>
 
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="gradient-text">Instagram Earnings Calculator</span>
+            <span className="gradient-text">Instagram Income Calculator</span>
           </h1>
 
           {/* Subtitle */}
           {/* <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Calculate your potential Instagram earnings based on followers,
+            Calculate your potential Instagram Income based on followers,
             engagement rate, and niche. Get accurate estimates for sponsored
             posts, brand deals, and affiliate marketing.
           </p> */}

@@ -6,7 +6,7 @@ import { Mail, MapPin } from "lucide-react"
 export const metadata = {
   title: "Contact Us - Side Hustlers",
   description:
-    "Get in touch with our team. We're here to help with any questions about our Instagram earnings calculator.",
+    "Get in touch with our team. We're here to help with any questions about our Instagram Income calculator.",
 }
 
 export default function ContactPage() {

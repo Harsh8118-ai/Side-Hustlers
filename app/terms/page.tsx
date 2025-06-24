@@ -3,7 +3,7 @@ import AdPlaceholder from "@/components/AdPlaceholder"
 
 export const metadata = {
   title: "Terms of Service - Side Hustlers",
-  description: "Terms of service and conditions for using our Instagram earnings calculator.",
+  description: "Terms of service and conditions for using our Instagram Income calculator.",
 }
 
 export default function TermsPage() {
@@ -22,7 +22,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold mb-4 gradient-text">Acceptance of Terms</h2>
             <div className="text-gray-300 space-y-4">
               <p>
-                By accessing and using the Instagram Earnings Calculator website and services, you accept and agree to
+                By accessing and using the Instagram Income Calculator website and services, you accept and agree to
                 be bound by the terms and provision of this agreement.
               </p>
             </div>
@@ -67,7 +67,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold mb-4 gradient-text">Limitations</h2>
             <div className="text-gray-300 space-y-4">
               <p>
-                In no event shall Instagram Earnings Calculator or its suppliers be liable for any damages (including,
+                In no event shall Instagram Income Calculator or its suppliers be liable for any damages (including,
                 without limitation, damages for loss of data or profit, or due to business interruption) arising out of
                 the use or inability to use our calculator, even if we have been notified orally or in writing of the
                 possibility of such damage.

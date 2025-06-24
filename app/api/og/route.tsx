@@ -80,7 +80,7 @@ export async function GET(req: NextRequest) {
         </div>
 
         <p style={{ marginTop: 40, fontSize: 20, color: "#00ff88" }}>
-          Estimate your Instagram earnings 💰
+          Estimate your Instagram Income 💰
         </p>
       </div>
     ),

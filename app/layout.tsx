@@ -11,21 +11,21 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Side Hustlers",
   description:
-    "Calculate your potential Instagram earnings based on followers, engagement rate, and niche. Free Instagram income calculator for influencers and content creators.",
+    "Calculate your potential Instagram Income based on followers, engagement rate, and niche. Free Instagram income calculator for influencers and content creators.",
   keywords:
-    "instagram earnings calculator, instagram income calculator, influencer earnings, social media monetization",
-  authors: [{ name: "Instagram Earnings Calculator" }],
+    "Instagram Income calculator, instagram income calculator, influencer earnings, social media monetization",
+  authors: [{ name: "Instagram Income Calculator" }],
   openGraph: {
-    title: "Instagram Earnings Calculator - Find Out How Much You Can Earn",
-    description: "Calculate your potential Instagram earnings based on followers, engagement rate, and niche.",
+    title: "Instagram Income Calculator - Find Out How Much You Can Earn",
+    description: "Calculate your potential Instagram Income based on followers, engagement rate, and niche.",
     url: "https://instagram-earnings-calculator.com",
-    siteName: "Instagram Earnings Calculator",
+    siteName: "Instagram Income Calculator",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Instagram Earnings Calculator",
+        alt: "Instagram Income Calculator",
       },
     ],
     locale: "en_US",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Instagram Earnings Calculator - Find Out How Much You Can Earn",
-    description: "Calculate your potential Instagram earnings based on followers, engagement rate, and niche.",
+    title: "Instagram Income Calculator - Find Out How Much You Can Earn",
+    description: "Calculate your potential Instagram Income based on followers, engagement rate, and niche.",
     images: ["/twitter-image.jpg"],
   },
   robots: {

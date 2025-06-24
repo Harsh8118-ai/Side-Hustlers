@@ -10,7 +10,7 @@ export default function CalculatorContent() {
     <>
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold gradient-text mb-4">
-          Your Instagram Earnings Potential
+          Your Instagram Income Potential
         </h1>
         <p className="text-gray-300 text-lg">
           Based on your profile analysis, here's what you could earn

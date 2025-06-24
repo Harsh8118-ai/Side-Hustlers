@@ -44,7 +44,7 @@ export default function CalculatorForm() {
     <section className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold gradient-text mb-4">Calculate Your Instagram Earnings</h2>
+          <h2 className="text-4xl font-bold gradient-text mb-4">Calculate Your Instagram Income</h2>
           <p className="text-xl text-gray-300">Enter your details below for a personalized earnings estimate</p>
         </div>
 

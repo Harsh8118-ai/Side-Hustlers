@@ -25,7 +25,7 @@ export async function generateMetadata(
 
   if (!res.ok) {
     return {
-      title: "Instagram Earnings Calculator",
+      title: "Instagram Income Calculator",
       description: "Calculate your Instagram income potential.",
     };
   }
@@ -41,10 +41,10 @@ export async function generateMetadata(
   )}&yearly=${encodeURIComponent(data.yearly || "₹24000")}`;
 
   return {
-    title: `@${data.username}'s Instagram Earnings`,
-    description: "Check out your Instagram earning potential.",
+    title: `@${data.username}'s Instagram Income`,
+    description: "Check out your Instagram Income potential.",
     openGraph: {
-      title: `@${data.username}'s Instagram Earnings`,
+      title: `@${data.username}'s Instagram Income`,
       description: "Even small creators can earn! 💸",
       images: [imageUrl],
       url: `http://localhost:4000/share/${data.username}`,
@@ -52,7 +52,7 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title: `@${data.username}'s Instagram Earnings`,
+      title: `@${data.username}'s Instagram Income`,
       description: "Even small creators can earn! 💸",
       images: [imageUrl],
     },
