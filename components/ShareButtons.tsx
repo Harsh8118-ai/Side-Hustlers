@@ -5,19 +5,45 @@ import { Copy, MessageCircle, Twitter, Instagram } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { useEffect } from "react"
 
+const formatCurrency = (amount: string | number) => {
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(Number(amount || 0));
+};
+
+
 export default function ShareButtons() {
   const [copied, setCopied] = useState(false)
   const [username, setUsername] = useState("")
+  const [followerCount, setFollowerCount] = useState(0);
+  const [monthlyEarnings, setMonthlyEarnings] = useState(0);
+  const [yearlyEarnings, setYearlyEarnings] = useState(0);
+  const [perPostEarnings, setPerPostEarnings] = useState(0);
 
   useEffect(() => {
-    const stored = localStorage.getItem("username")
-    if (stored) setUsername(stored)
-  }, [])
+    setUsername(localStorage.getItem("username") || "");
+    setFollowerCount(Number(localStorage.getItem("follower_count") || 0));
+    setMonthlyEarnings(Number(localStorage.getItem("monthly_earning") || 0));
+    setYearlyEarnings(Number(localStorage.getItem("yearly_earning") || 0));
+    setPerPostEarnings(Number(localStorage.getItem("per_post") || 0));
+  }, []);
 
   const shareUrl = username
     ? `https://silkeglam.com/share/${username}`
     : window.location.href;
-  const shareText = "Check out my Instagram earnings potential! 💰"
+
+  const shareText = `📢 *Instagram Earnings Report!*
+
+👤 *@${username}*
+👥 *Followers:* ${followerCount.toLocaleString()}
+📈 *Per Post:* ${formatCurrency(perPostEarnings)}
+💰 *Monthly:* ${formatCurrency(monthlyEarnings)}
+🏆 *Yearly:* ${formatCurrency(yearlyEarnings)}
+
+🔍 *Discover yours now →*
+${shareUrl}`;
 
   const handleCopyLink = async () => {
     try {
@@ -30,7 +56,7 @@ export default function ShareButtons() {
   }
 
   const handleWhatsAppShare = () => {
-    const text = `${shareText} ${shareUrl}`;
+    const text = `${shareText}`;
     const encodedText = encodeURIComponent(text);
     const url = `https://wa.me/?text=${encodedText}`;
     window.open(url, "_blank");

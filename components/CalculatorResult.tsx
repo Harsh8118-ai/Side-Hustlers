@@ -93,6 +93,12 @@ export default function CalculatorResult() {
   const yearlyEarnings = monthlyEarnings * 12
   const perPostEarnings = Math.round(monthlyEarnings / 4)
 
+  localStorage.setItem("username", username);
+  localStorage.setItem("follower_count", follower_count.toString());
+  localStorage.setItem("monthly_earning", monthlyEarnings.toString());
+  localStorage.setItem("per_post", perPostEarnings.toString());
+  localStorage.setItem("yearly_earning", yearlyEarnings.toString());
+
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat("en-IN", {
       style: "currency",
