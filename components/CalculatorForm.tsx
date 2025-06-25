@@ -105,11 +105,12 @@ export default function CalculatorForm() {
 
               {/* Niche */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="niche" className="block text-sm font-medium text-gray-300 mb-2">
                   <Tag className="inline mr-2" size={16} />
                   Content Niche
                 </label>
                 <select
+                  id="niche"
                   name="niche"
                   value={formData.niche}
                   onChange={handleInputChange}

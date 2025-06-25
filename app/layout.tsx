@@ -9,23 +9,24 @@ import RouteChangeAdHandler from "@/components/RouteChangeAdHandler"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Side Hustlers",
+  title: "Instagram Income Calculator – Estimate Your Earnings | Side Hustlers",
   description:
-    "Calculate your potential Instagram Income based on followers, engagement rate, and niche. Free Instagram income calculator for influencers and content creators.",
+    "Find out how much you can earn from Instagram! Use our free Instagram Income Calculator to estimate earnings based on followers, engagement rate, and niche. Perfect for influencers and content creators.",
   keywords:
-    "Instagram Income calculator, instagram income calculator, influencer earnings, social media monetization",
-  authors: [{ name: "Instagram Income Calculator" }],
+    "Instagram income calculator, Instagram earnings calculator, influencer income estimator, social media monetization, Instagram money calculator, Instagram revenue tool",
+  authors: [{ name: "Side Hustlers" }],
   openGraph: {
-    title: "Instagram Income Calculator - Find Out How Much You Can Earn",
-    description: "Calculate your potential Instagram Income based on followers, engagement rate, and niche.",
-    url: "https://instagram-earnings-calculator.com",
-    siteName: "Instagram Income Calculator",
+    title: "Instagram Income Calculator – Estimate Your Earnings | Side Hustlers",
+    description:
+      "Use our free tool to estimate how much you can earn from Instagram based on your followers, engagement rate, and niche.",
+    url: "https://silkeglam.com",
+    siteName: "Side Hustlers",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Instagram Income Calculator",
+        alt: "Instagram Income Calculator Preview Image",
       },
     ],
     locale: "en_US",
@@ -33,8 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Instagram Income Calculator - Find Out How Much You Can Earn",
-    description: "Calculate your potential Instagram Income based on followers, engagement rate, and niche.",
+    title: "Free Instagram Income Calculator by Side Hustlers",
+    description:
+      "Estimate your Instagram income instantly based on real metrics. Try our influencer earnings calculator now!",
     images: ["/twitter-image.jpg"],
   },
   robots: {
@@ -49,7 +51,11 @@ export const metadata: Metadata = {
     },
   },
   generator: "v0.dev",
+  metadataBase: new URL("https://silkeglam.com"),
+  category: "marketing",
+  applicationName: "Instagram Income Calculator",
 }
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -77,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ></script>
 
         {/* Your original meta and links */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

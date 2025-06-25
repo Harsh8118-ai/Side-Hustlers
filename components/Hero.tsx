@@ -65,16 +65,9 @@ export default function Hero() {
           </div>
 
           {/* Main heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="gradient-text">Instagram Income Calculator</span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 will-change-transform">
+            <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Instagram Income Calculator</span>
           </h1>
-
-          {/* Subtitle */}
-          {/* <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Calculate your potential Instagram Income based on followers,
-            engagement rate, and niche. Get accurate estimates for sponsored
-            posts, brand deals, and affiliate marketing.
-          </p> */}
 
           {/* Calculator Form */}
           <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-12">
@@ -109,21 +102,21 @@ export default function Hero() {
               <div className="flex items-center justify-center w-16 h-16 bg-violet-600/20 rounded-full mx-auto mb-4">
                 <Users className="text-violet-400" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">500K+</h3>
+              <p className="text-2xl font-bold text-white mb-2" role="heading" aria-level={3}>500K+</p>
               <p className="text-gray-400">Calculations Made</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-cyan-600/20 rounded-full mx-auto mb-4">
                 <DollarSign className="text-cyan-400" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">₹2M+</h3>
+              <p className="text-2xl font-bold text-white mb-2" role="heading" aria-level={3}>₹2M+</p>
               <p className="text-gray-400">Earnings Calculated</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-green-600/20 rounded-full mx-auto mb-4">
                 <TrendingUp className="text-green-400" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">95%</h3>
+              <p className="text-2xl font-bold text-white mb-2" role="heading" aria-level={3}>95%</p>
               <p className="text-gray-400">Accuracy Rate</p>
             </div>
           </div>
