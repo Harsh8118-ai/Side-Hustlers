@@ -9,7 +9,7 @@ import RouteChangeAdHandler from "@/components/RouteChangeAdHandler"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Instagram Income Calculator – Estimate Your Earnings | Side Hustlers",
+  title: "Side Hustlers | Instagram Income Calculator – Estimate Your Earnings",
   description:
     "Find out how much you can earn from Instagram! Use our free Instagram Income Calculator to estimate earnings based on followers, engagement rate, and niche. Perfect for influencers and content creators.",
   keywords:
