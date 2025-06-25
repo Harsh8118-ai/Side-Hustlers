@@ -11,11 +11,11 @@ import { useRouter } from "next/navigation";
 export default function Hero() {
   const [username, setUsername] = useState("");
   const { getDetails, loading, error, profile } = useDetails();
-  useVisitorLogger();
   const router = useRouter();
 
   console.log("Hello From the Developer!");
 
+  const { logVisitor } = useVisitorLogger();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,6 +30,8 @@ export default function Hero() {
       alert("Profile data not loaded properly.");
       return;
     }
+
+    logVisitor();
 
     const params = new URLSearchParams({
       username: profile.username,
