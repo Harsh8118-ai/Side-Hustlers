@@ -3,6 +3,8 @@ import AdPlaceholder from "@/components/AdPlaceholder"
 import BlogCard from "@/components/BlogCard"
 import NewsletterSignup from "@/components/NewsletterSignup"
 import Image from "next/image"
+import BlogOne from "@/components/blogs/Blog-1"
+import BlogTwo from "@/components/blogs/Blog-2"
 
 export const metadata = {
   title: "Blog & Resources - Side Hustlers",
@@ -59,7 +61,7 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <><div className="container mx-auto px-4 py-16">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -122,5 +124,8 @@ export default function BlogPage() {
         <AdPlaceholder width="728" height="90" label="Bottom Banner Ad" className="mx-auto mt-12" placementId={101} />
       </div>
     </div>
+    <BlogTwo />
+    {/* <BlogOne /> */}
+    </>
   )
 }
