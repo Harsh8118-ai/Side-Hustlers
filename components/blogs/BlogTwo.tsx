@@ -14,7 +14,7 @@ const BlogTwo = () => {
       cons: ['Low engagement', 'Limited storytelling'],
       reach: 'Medium to High',
       time: 'Instant to low',
-      color: 'from-pink-500 to-purple-500'
+      color: 'from-pink-500 to-purple-500'  
     },
     {
       type: 'Videos',
@@ -118,26 +118,7 @@ const BlogTwo = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header Navigation */}
-      <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-slate-700/50 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <Instagram className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-white font-semibold text-lg">Influencer Hub</span>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#guide" className="text-slate-300 hover:text-white transition-colors">Guide</a>
-              <a href="#strategies" className="text-slate-300 hover:text-white transition-colors">Strategies</a>
-              <a href="#monetization" className="text-slate-300 hover:text-white transition-colors">Monetization</a>
-              <a href="#faq" className="text-slate-300 hover:text-white transition-colors">FAQ</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-gradient-to-r from-purple-600/20 to-cyan-600/20">
 
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

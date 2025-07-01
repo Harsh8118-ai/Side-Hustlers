@@ -3,28 +3,8 @@ import { Calendar, Clock, User, ArrowRight, Star, Target, TrendingUp } from 'luc
 
 const BlogOne = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header Navigation */}
-      <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-slate-700/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">₹</span>
-              </div>
-              <span className="text-white font-semibold text-lg">Side Hustlers</span>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">Home</a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">Calculator</a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">About</a>
-              <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors font-medium">Blog</a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+    <div className="min-h-screen bg-gradient-to-r from-purple-600/20 to-cyan-600/20">
+  
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Blog Header */}
@@ -64,7 +44,7 @@ const BlogOne = () => {
               It's about creating strategic campaigns that build genuine connections while skyrocketing your brand visibility. 🚀
             </p>
             <p className="text-slate-300 text-lg leading-relaxed">
-              In this comprehensive guide, we'll explore eight battle-tested giveaway strategies that deliver real results—whether 
+              In this comprehensive guide, we'll explore eight battle-tested giveaway strategies that deliver real results-whether 
               you're aiming to expand your reach, increase engagement, or convert followers into loyal customers.
             </p>
           </div>
@@ -84,7 +64,7 @@ const BlogOne = () => {
               <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
                 <TrendingUp className="w-8 h-8 text-cyan-400 mb-3" />
                 <h3 className="text-white font-semibold mb-2">Multi-Platform Promotion</h3>
-                <p className="text-slate-300 text-sm">Amplify your giveaway across all channels—Stories, Reels, posts, and beyond</p>
+                <p className="text-slate-300 text-sm">Amplify your giveaway across all channels-Stories, Reels, posts, and beyond</p>
               </div>
               <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
                 <User className="w-8 h-8 text-green-400 mb-3" />
@@ -99,11 +79,11 @@ const BlogOne = () => {
             <h2 className="text-3xl font-bold text-white mb-6">The Psychology Behind Successful Instagram Giveaways</h2>
             <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/30 mb-6">
               <p className="text-slate-300 text-lg leading-relaxed mb-4">
-                Instagram giveaways tap into fundamental human psychology—the excitement of potential rewards combined with social validation. 
+                Instagram giveaways tap into fundamental human psychology-the excitement of potential rewards combined with social validation. 
                 When executed strategically, they become powerful tools for brand growth and community building.
               </p>
               <p className="text-slate-300 text-lg leading-relaxed">
-                The secret sauce? People don't just want free stuff—they want to feel special, included, and part of something bigger than themselves. 🌟
+                The secret sauce? People don't just want free stuff-they want to feel special, included, and part of something bigger than themselves. 🌟
               </p>
             </div>
           </section>
@@ -123,7 +103,7 @@ const BlogOne = () => {
                   Skip the generic gift cards and basic swag. Your prize should make people stop scrolling and think, "I absolutely NEED to win this!"
                 </p>
                 <p className="text-slate-300 mb-4">
-                  Consider creating themed bundles that solve real problems or fulfill genuine desires. Think beyond your products—what lifestyle or transformation does your brand represent?
+                  Consider creating themed bundles that solve real problems or fulfill genuine desires. Think beyond your products-what lifestyle or transformation does your brand represent?
                 </p>
                 <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
                   <p className="text-purple-300 text-sm font-medium">
@@ -163,7 +143,7 @@ const BlogOne = () => {
                   Your giveaway post needs to grab attention in a sea of endless content. Think bold colors, clear messaging, and professional presentation that screams premium brand.
                 </p>
                 <p className="text-slate-300">
-                  Don't forget to lead with "GIVEAWAY" in your caption—clarity beats cleverness every time.
+                  Don't forget to lead with "GIVEAWAY" in your caption-clarity beats cleverness every time.
                 </p>
               </div>
 

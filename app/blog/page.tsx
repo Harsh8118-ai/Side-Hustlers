@@ -2,62 +2,18 @@ import { Card } from "@/components/ui/card"
 import AdPlaceholder from "@/components/AdPlaceholder"
 import BlogCard from "@/components/BlogCard"
 import NewsletterSignup from "@/components/NewsletterSignup"
+import Link from "next/link"
 import Image from "next/image"
-import BlogOne from "@/components/blogs/Blog-1"
-import BlogTwo from "@/components/blogs/Blog-2"
+import blogPosts from "@/hooks/blogPosts" 
+import BlogOne from "@/components/blogs/BlogOne"
+import BlogTwo from "@/components/blogs/BlogTwo"
+import BlogThree from "@/components/blogs/BlogThree"
 
 export const metadata = {
   title: "Blog & Resources - Side Hustlers",
   description:
     "Learn how to grow your Instagram, increase engagement, and maximize your earnings with our expert guides and tips.",
 }
-
-const blogPosts = [
-  {
-    title: "5 Ways to Earn Money from Instagram in 2024",
-    excerpt:
-      "Discover the most effective monetization strategies for Instagram creators, from sponsored posts to affiliate marketing.",
-    image: "/placeholder.svg?height=200&width=300",
-    readTime: "5 min read",
-    category: "Monetization",
-  },
-  {
-    title: "How to Grow Your Instagram Organically",
-    excerpt: "Learn proven strategies to increase your followers and engagement without spending money on ads.",
-    image: "/placeholder.svg?height=200&width=300",
-    readTime: "7 min read",
-    category: "Growth",
-  },
-  {
-    title: "Instagram Algorithm Secrets for 2024",
-    excerpt: "Understand how the Instagram algorithm works and optimize your content for maximum reach and engagement.",
-    image: "/placeholder.svg?height=200&width=300",
-    readTime: "6 min read",
-    category: "Algorithm",
-  },
-  {
-    title: "Creating Engaging Instagram Stories",
-    excerpt:
-      "Master the art of Instagram Stories to boost engagement and connect with your audience on a deeper level.",
-    image: "/placeholder.svg?height=200&width=300",
-    readTime: "4 min read",
-    category: "Content",
-  },
-  {
-    title: "Influencer Marketing Rates Guide",
-    excerpt: "Learn how to price your sponsored content and negotiate fair rates with brands and agencies.",
-    image: "/placeholder.svg?height=200&width=300",
-    readTime: "8 min read",
-    category: "Business",
-  },
-  {
-    title: "Instagram Analytics: What Metrics Matter",
-    excerpt: "Understand which Instagram metrics actually matter for growth and monetization success.",
-    image: "/placeholder.svg?height=200&width=300",
-    readTime: "5 min read",
-    category: "Analytics",
-  },
-]
 
 export default function BlogPage() {
   return (
@@ -105,6 +61,7 @@ export default function BlogPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {blogPosts.map((post, index) => (
             <div key={index}>
+              <Link href={`/blog/${post.slug}`}>
               <BlogCard {...post} />
               {/* Ad between every 2-3 posts */}
               {(index + 1) % 3 === 0 && (
@@ -112,6 +69,7 @@ export default function BlogPage() {
                   <AdPlaceholder width="100%" height="200" label={`Inline Ad ${Math.floor(index / 3) + 1}`} placementId={101} />
                 </div>
               )}
+              </Link>
             </div>
           ))}
         </div>
@@ -125,7 +83,8 @@ export default function BlogPage() {
       </div>
     </div>
     <BlogTwo />
-    {/* <BlogOne /> */}
+    <BlogOne />
+    <BlogThree />
     </>
   )
 }
