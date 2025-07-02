@@ -4,27 +4,6 @@ import { Calendar, Clock, User, ArrowRight, Star, Target, TrendingUp, Zap, Users
 const BlogThree = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header Navigation */}
-      <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-slate-700/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">₹</span>
-              </div>
-              <span className="text-white font-semibold text-lg">Side Hustlers</span>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">Home</a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">Calculator</a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">About</a>
-              <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors font-medium">Blog</a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Blog Header */}

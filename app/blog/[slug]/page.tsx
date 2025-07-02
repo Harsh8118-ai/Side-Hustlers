@@ -13,9 +13,9 @@
 
   // Map slugs to blog components
   const blogComponentMap = {
-    "instagram-giveaway-strategies-2024": <BlogOne />,
-    "grow-instagram-organically": <BlogTwo />,
-    "instagram-algorithm-secrets-2024": <BlogThree />,
+    "instagram-giveaway-strategies-2025": <BlogOne />,
+    "become-instagram-influencer": <BlogTwo />,
+    "instagram-reels-strategies-2025": <BlogThree />,
   } satisfies Record<string, React.ReactNode>
 
 
