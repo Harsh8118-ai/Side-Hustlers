@@ -5,9 +5,6 @@ import NewsletterSignup from "@/components/NewsletterSignup"
 import Link from "next/link"
 import Image from "next/image"
 import blogPosts from "@/hooks/blogPosts" 
-import BlogOne from "@/components/blogs/BlogOne"
-import BlogTwo from "@/components/blogs/BlogTwo"
-import BlogThree from "@/components/blogs/BlogThree"
 
 export const metadata = {
   title: "Blog & Resources - Side Hustlers",
@@ -27,7 +24,7 @@ export default function BlogPage() {
           </p>
         </div>
 
-        <AdPlaceholder width="728" height="90" label="Top Banner Ad" className="mx-auto mb-12" placementId={101} />
+        {/* <AdPlaceholder width="728" height="90" label="Top Banner Ad" className="mx-auto mb-12" placementId={101} /> */}
 
         {/* Featured Post */}
         <Card className="glassmorphism p-8 mb-12">
@@ -66,7 +63,7 @@ export default function BlogPage() {
               {/* Ad between every 2-3 posts */}
               {(index + 1) % 3 === 0 && (
                 <div className="mt-8">
-                  <AdPlaceholder width="100%" height="200" label={`Inline Ad ${Math.floor(index / 3) + 1}`} placementId={101} />
+                  {/* <AdPlaceholder width="100%" height="200" label={`Inline Ad ${Math.floor(index / 3) + 1}`} placementId={101} /> */}
                 </div>
               )}
               </Link>
@@ -74,17 +71,14 @@ export default function BlogPage() {
           ))}
         </div>
 
-        <AdPlaceholder width="728" height="90" label="Middle Banner Ad" className="mx-auto mb-12" placementId={101} />
+        {/* <AdPlaceholder width="728" height="90" label="Middle Banner Ad" className="mx-auto mb-12" placementId={101} /> */}
 
         {/* Newsletter Signup */}
         <NewsletterSignup />
 
-        <AdPlaceholder width="728" height="90" label="Bottom Banner Ad" className="mx-auto mt-12" placementId={101} />
+        {/* <AdPlaceholder width="728" height="90" label="Bottom Banner Ad" className="mx-auto mt-12" placementId={101} /> */}
       </div>
     </div>
-    <BlogTwo />
-    <BlogOne />
-    <BlogThree />
     </>
   )
 }

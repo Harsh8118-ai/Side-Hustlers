@@ -24,7 +24,7 @@ export default function AboutPage() {
         </div>
 
         {/* Top Banner Ad */}
-        <div className="w-full flex justify-center">
+        {/* <div className="w-full flex justify-center">
           <AdPlaceholder
             width="100%"
             height="90"
@@ -32,7 +32,7 @@ export default function AboutPage() {
             className="w-full max-w-[728px] h-[90px]"
             placementId={101}
           />
-        </div>
+        </div> */}
 
         {/* How It Works */}
         <Card className="glassmorphism p-6 sm:p-8">
@@ -109,7 +109,7 @@ export default function AboutPage() {
         </Card>
 
         {/* Middle Banner Ad */}
-        <div className="w-full flex justify-center">
+        {/* <div className="w-full flex justify-center">
           <AdPlaceholder
             width="100%"
             height="90"
@@ -117,7 +117,7 @@ export default function AboutPage() {
             className="w-full max-w-[728px] h-[90px]"
             placementId={101}
           />
-        </div>
+        </div> */}
 
         {/* Team Section */}
         {/* <Card className="glassmorphism p-6 sm:p-8">
@@ -144,7 +144,7 @@ export default function AboutPage() {
         </Card> */}
 
         {/* Bottom Banner Ad */}
-        <div className="w-full flex justify-center">
+        {/* <div className="w-full flex justify-center">
           <AdPlaceholder
             width="100%"
             height="90"
@@ -152,7 +152,7 @@ export default function AboutPage() {
             className="w-full max-w-[728px] h-[90px]"
             placementId={101}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   )

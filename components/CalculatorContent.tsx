@@ -19,7 +19,7 @@ export default function CalculatorContent() {
 
       <CalculatorResult />
       <ShareButtons />
-      <AdPlaceholder width="100%" height="250" label="Inline Content Ad" placementId={101} />
+      {/* <AdPlaceholder width="100%" height="250" label="Inline Content Ad" placementId={101} /> */}
 
       <Card className="glassmorphism p-8">
         <h2 className="text-2xl font-bold mb-6 gradient-text">💡 Insights & Tips</h2>

@@ -9,7 +9,7 @@ export default function HomePage() {
       <Hero />
 
       {/* Ad Placeholder - Top Banner */}
-      <div className="w-full flex justify-center">
+      {/* <div className="w-full flex justify-center">
         <AdPlaceholder
           width="100%"
           height="90"
@@ -17,13 +17,13 @@ export default function HomePage() {
           className="w-full max-w-[728px] h-[90px]"
           placementId={101}
         />
-      </div>
+      </div> */}
 
       <CalculatorForm />
       <HowItWorks />
 
       {/* Ad Placeholder - Bottom Banner */}
-      <div className="w-full flex justify-center">
+      {/* <div className="w-full flex justify-center">
         <AdPlaceholder
           width="100%"
           height="90"
@@ -31,7 +31,7 @@ export default function HomePage() {
           className="w-full max-w-[728px] h-[90px]"
           placementId={101}
         />
-      </div>
+      </div> */}
     </div>
   )
 }
