@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/card";
 export default function CalculatorContent() {
   return (
     <>
-    <div className="px-24">
+    <div className="px-24"> 
       <div className="text-center mb-8 ">
         <h1 className="text-4xl font-bold gradient-text mb-4">
           Your Instagram Income Potential
