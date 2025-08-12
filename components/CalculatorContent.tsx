@@ -2,7 +2,7 @@
 
 import CalculatorResult from "@/components/CalculatorResult";
 import ShareButtons from "@/components/ShareButtons";
-import AdPlaceholder from "@/components/AdPlaceholder";
+import AdPlaceholder from "@/components/AdPlaceholder"; 
 import { Card } from "@/components/ui/card";
 
 export default function CalculatorContent() {
