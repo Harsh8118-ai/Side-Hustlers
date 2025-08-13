@@ -18,7 +18,7 @@ export default function CalculatorContent() {
         </p>
       </div>
 
-      <CalculatorResult />
+      <CalculatorResult /> 
       <ShareButtons />
       {/* <AdPlaceholder width="100%" height="250" label="Inline Content Ad" placementId={101} /> */}
 
