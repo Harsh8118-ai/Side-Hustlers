@@ -38,13 +38,14 @@ export default function BlogPage() {
                 Everything you need to know about turning your Instagram account into a profitable business. From
                 building your audience to securing brand deals.
               </p>
+              <Link href="/blog/instagram-monetization">
               <button className="bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-700 hover:to-cyan-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300">
                 Read Full Guide
-              </button>
+              </button></Link>
             </div>
             <div>
               <Image
-                src="/placeholder.svg?height=300&width=400"
+                src="https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp"
                 alt="Featured blog post"
                 width={400}
                 height={300}

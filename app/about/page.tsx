@@ -98,7 +98,7 @@ export default function AboutPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/placeholder.svg?height=300&width=300"
+                src="/AboutUs.png"
                 alt="Mission illustration"
                 width={300}
                 height={300}

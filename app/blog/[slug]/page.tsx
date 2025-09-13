@@ -4,6 +4,7 @@
   import BlogOne from "@/components/blogs/BlogOne"
   import BlogTwo from "@/components/blogs/BlogTwo"
   import BlogThree from "@/components/blogs/BlogThree"
+import MainBlog from "@/components/blogs/MainBlog"
 
   interface BlogPostPageProps {
     params: {
@@ -13,6 +14,7 @@
 
   // Map slugs to blog components
   const blogComponentMap = {
+    "instagram-monetization":<MainBlog />,
     "instagram-giveaway-strategies-2025": <BlogOne />,
     "become-instagram-influencer": <BlogTwo />,
     "instagram-reels-strategies-2025": <BlogThree />,
