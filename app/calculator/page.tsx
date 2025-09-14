@@ -4,6 +4,12 @@ import { Suspense } from "react";
 import CalculatorContent from "@/components/CalculatorContent";
 import AdPlaceholder from "@/components/AdPlaceholder";
 
+export const metadata = {
+  title: "Instagram Income Calculator — Estimate Earnings Free | Side Hustlers",
+  description:
+    "Discover how much you can earn on Instagram. Enter followers & engagement to calculate income potential. 100% free tool for creators & influencers.",
+}
+
 export default function CalculatorPage() {
   return (
     <div className="container mx-auto py-16">

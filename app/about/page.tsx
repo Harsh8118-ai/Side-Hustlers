@@ -3,9 +3,9 @@ import AdPlaceholder from "@/components/AdPlaceholder"
 import Image from "next/image"
 
 export const metadata = {
-  title: "About - Side Hustlers",
+  title: "About Side Hustlers — Instagram Income Calculator",
   description:
-    "Learn how our Instagram Income calculator works and our mission to help creators monetize their content.",
+    "Discover how our Instagram Income Calculator works and how we help creators monetize their followers, engagement & niche. Learn our mission.",
 }
 
 export default function AboutPage() {

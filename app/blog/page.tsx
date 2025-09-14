@@ -7,9 +7,9 @@ import Image from "next/image"
 import blogPosts from "@/hooks/blogPosts" 
 
 export const metadata = {
-  title: "Blog & Resources - Side Hustlers",
+  title: "Side Hustlers Blog — Instagram Growth & Monetization Tips",
   description:
-    "Learn how to grow your Instagram, increase engagement, and maximize your earnings with our expert guides and tips.",
+    "Explore expert strategies on Instagram growth, monetization, and influencer marketing. Stay ahead with Side Hustlers’ actionable creator tips.",
 }
 
 export default function BlogPage() {

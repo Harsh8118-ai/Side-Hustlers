@@ -9,11 +9,11 @@ import RouteChangeAdHandler from "@/components/RouteChangeAdHandler"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Side Hustlers | Instagram Income Calculator – Estimate Your Earnings",
+  title: "Instagram Income Calculator | Side Hustlers",
   description:
-    "Find out how much you can earn from Instagram! Use our free Instagram Income Calculator to estimate earnings based on followers, engagement rate, and niche. Perfect for influencers and content creators.",
+    "Free Instagram Income Calculator. Estimate how much money you can earn from followers, engagement, and niche. Perfect for influencers & creators",
   keywords:
-    "Instagram income calculator, Instagram earnings calculator, influencer income estimator, social media monetization, Instagram money calculator, Instagram revenue tool",
+    "Instagram income calculator, Instagram income generator, Instagram earnings calculator, influencer income estimator, social media monetization, Instagram money calculator, Instagram revenue tool",
   authors: [{ name: "Side Hustlers" }],
   openGraph: {
     title: "Instagram Income Calculator – Estimate Your Earnings | Side Hustlers",
@@ -81,6 +81,50 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         ></script>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Instagram Income Calculator",
+              "url": "https://silkeglam.com/",
+              "applicationCategory": "BusinessApplication",
+              "description": "Estimate your Instagram earnings based on followers, engagement, and niche.",
+              "creator": { "@type": "Organization", "name": "Side Hustlers" }
+            })
+          }}
+        ></script>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How much money can I make from Instagram followers?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It depends on your followers, engagement rate, and niche. Use our calculator to get an instant estimate."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much do 10k Instagram followers earn?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "On average, accounts with 10k followers can earn $50–$100 per sponsored post, depending on engagement and niche."
+                  }
+                }
+              ]
+            })
+          }}
+        ></script>
+
 
         {/* Your original meta and links */}
         <link rel="canonical" href="https://silkeglam.com/" />
